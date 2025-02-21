@@ -1,4 +1,4 @@
-public class Niño {
+public class Nino {
     private String nombre;
     private int edad;
     private String genero;
@@ -6,7 +6,7 @@ public class Niño {
     private String alergias;
     private Acudiente acudiente;
 
-    public Niño(String nombre, int edad, String genero, String documentoIdentidad, String alergias, Acudiente acudiente) {
+    public Nino(String nombre, int edad, String genero, String documentoIdentidad, String alergias, Acudiente acudiente) {
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;

@@ -2,45 +2,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestionGuarderia {
-    private List<Niño> niñosMatriculados;
+    private List<Nino> ninosMatriculados;
 
     public GestionGuarderia() {
-        this.niñosMatriculados = new ArrayList<>();
+        this.ninosMatriculados = new ArrayList<>();
     }
 
-    public void registrarNiño(Niño niño) {
-        if (buscarNiño(niño.getDocumentoIdentidad()) == null) {
-            niñosMatriculados.add(niño);
-            System.out.println("Niño registrado exitosamente.");
+    public void registrarNino(Nino nino) {
+        if (buscarNino(nino.getDocumentoIdentidad()) == null) {
+            ninosMatriculados.add(nino);
+            System.out.println("Nino registrado exitosamente.");
         } else {
-            System.out.println("El niño ya está registrado.");
+            System.out.println("El nino ya está registrado.");
         }
     }
 
-    public Niño buscarNiño(String documentoIdentidad) {
-        return niñosMatriculados.stream()
+    public Nino buscarNino(String documentoIdentidad) {
+        return ninosMatriculados.stream()
                 .filter(n -> n.getDocumentoIdentidad().equals(documentoIdentidad))
                 .findFirst()
                 .orElse(null);
     }
 
-    public void actualizarInformacion(Niño niñoActualizado) {
-        for (int i = 0; i < niñosMatriculados.size(); i++) {
-            if (niñosMatriculados.get(i).getDocumentoIdentidad().equals(niñoActualizado.getDocumentoIdentidad())) {
-                niñosMatriculados.set(i, niñoActualizado);
+    public void actualizarInformacion(Nino ninoActualizado) {
+        for (int i = 0; i < ninosMatriculados.size(); i++) {
+            if (ninosMatriculados.get(i).getDocumentoIdentidad().equals(ninoActualizado.getDocumentoIdentidad())) {
+                ninosMatriculados.set(i, ninoActualizado);
                 System.out.println("Información actualizada exitosamente.");
                 return;
             }
         }
-        System.out.println("No se encontró el niño para actualizar.");
+        System.out.println("No se encontró el nino para actualizar.");
     }
 
     public void eliminarRegistro(String documentoIdentidad) {
-        niñosMatriculados.removeIf(n -> n.getDocumentoIdentidad().equals(documentoIdentidad));
+        ninosMatriculados.removeIf(n -> n.getDocumentoIdentidad().equals(documentoIdentidad));
         System.out.println("Registro eliminado exitosamente.");
     }
 
-    public List<Niño> listarNiños() {
-        return new ArrayList<>(niñosMatriculados);
+    public List<Nino> listarNinos() {
+        return new ArrayList<>(ninosMatriculados);
     }
 }
