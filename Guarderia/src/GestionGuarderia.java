@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestionGuarderia {
-    private List<Nino> ninosMatriculados;
+    private final List<Nino> ninosMatriculados;
 
     public GestionGuarderia() {
         this.ninosMatriculados = new ArrayList<>();

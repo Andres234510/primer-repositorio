@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Main {
-    private static Scanner scanner = new Scanner(System.in);
-    private static GestionGuarderia guarderia = new GestionGuarderia();
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final GestionGuarderia guarderia = new GestionGuarderia();
 
     public static void main(String[] args) {
         boolean continuar = true;
